@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function(){
+
+
+            $("#btnRegister").click(()=>{
+
+                  var user = {
+                      UserName: $("#UserName").val(),
+                      Password: $("#Password").val(),
+                      Age: parseInt($("#Age").val())
+                  };
+
+                  $.ajax({
+                      method: 'post',
+                      url: 'http://127.0.0.1:5000/register-user&#39;,
+                      data: user,
+                  })
+
+                         alert('Registered Successfully...');
+                         $("#UserName").val('');
+                         $("#Age").val('');
+                         $("#Password").val('');
+
+            })
+           
+
+        })
+    </script>
+</head>
+<body>
+    <h2>Register User</h2>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" id="UserName"></dd>
+        <dt>Password</dt>
+        <dd><input type="password" id="Password"></dd>
+        <dt>Age</dt>
+        <dd><input type="number" id="Age"></dd>
+    </dl>
+    <button id="btnRegister">Register</button>
+</body>
+</html>

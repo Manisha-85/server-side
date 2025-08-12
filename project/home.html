@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/jquery.cookie/jquery.cookie.js"></script>
+    <script>
+         $(function(){
+              if($.cookie("username")){
+                   $("#user").html($.cookie("username"));
+              } else {
+                  location.href = "./login.html";
+              }
+
+              $("#btnSignout").click(()=>{
+                   $.removeCookie("username");
+                   location.href="./login.html";
+              })
+         })
+    </script>
+</head>
+<body>
+    <h2>Home -  <span id="user"></span> <button id="btnSignout">Signout</button> </h2>
+    <img src="../public/women-shop.jpg" width="200" height="200">
+    <img src="../public/men-fashion.jpg" width="200" height="200">
+    <img src="../public/kids-fashion.jpg" width="200" height="200">
+</body>
+</html>

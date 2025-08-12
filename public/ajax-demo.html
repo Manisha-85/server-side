@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+         $(function(){
+              $("#btnShow").click(()=>{
+                   $.ajax({
+                       method: "get",
+                       url: "../data/product.json",
+                       success: (products)=>{
+                            products.map(product=> {
+                                $(`<tr><td>${product.Name}</td><td>${product.Price}</td></tr>`).appendTo("tbody");
+                            })
+                       },
+                       error: (jQXHR, status, err) => {
+                           console.log(jQXHR.statusText);
+                       }
+                   })
+              })
+         })
+         .ajaxStart(()=>{
+             alert('Your request sent to server');
+         })
+         .ajaxSuccess(()=>{
+             alert('Your request executed successfully..');
+         })
+         .ajaxComplete(()=>{
+             alert('Your request completed');
+         })
+         .ajaxStop(()=>{
+             alert('Your request process stopped & response is ready');
+         })
+         .ajaxError(()=>{
+              alert('Something went wrong');
+         })
+    </script>
+</head>
+<body>
+    <button id="btnShow">Show Data</button>
+    <br><br>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

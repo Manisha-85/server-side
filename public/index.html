@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function LoadClick(){
+            fetch(`http://127.0.0.1:4000/products`)
+            .then(response=> response.json())
+            .then(products => {
+                  products.map(product=> {
+                       var tr = document.createElement("tr");
+                       var tdTitle = document.createElement("td");
+                       var tdImage = document.createElement("td");
+
+                       tdTitle.innerHTML = product.title;
+                       tdImage.innerHTML = `<img  width="100" height="100" src=${product.image}>`;
+
+                       tr.appendChild(tdTitle);
+                       tr.appendChild(tdImage);
+
+                       document.querySelector("tbody").appendChild(tr);
+                  })
+            })
+        }
+    </script>
+</head>
+<body>
+    <button onclick="LoadClick()">Load Products</button>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Preview</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
+

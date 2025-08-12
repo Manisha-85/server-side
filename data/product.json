@@ -1,0 +1,14 @@
+[
+    {
+        "Name":"Samsung TV",
+        "Price": 45000.44
+    },
+    {
+        "Name":"Mobile",
+        "Price": 15000.44
+    },
+    {
+        "Name":"Watch",
+        "Price": 5000.44
+    }
+]

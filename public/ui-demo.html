@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../jquery-ui/jquery-ui.js"></script>
+    <script>
+         $(function(){
+                $("aside").resizable();
+                $("ul").sortable();
+         })
+    </script>
+    <style>
+        aside {
+            border:1px solid gray;
+            padding: 20px;
+            width: 200px;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            background-color: black;
+            color:white;
+            padding: 5px;
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        li:hover {
+            background-color: yellow;
+            color:black;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    <h2>Topics</h2>
+    <ul>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+        <li>jQuery</li>
+    </ul>
+    <aside>
+        <p>Ads. Drag & Drop</p>
+        <figure>
+            <img src="../public/image/womens fashion jacket.jpg" width="100%" height="200">
+            <figcaption>Women Fashion 20% OFF</figcaption>
+        </figure>
+    </aside>
+</body>
+</html>

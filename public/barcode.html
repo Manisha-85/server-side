@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/jquery-ean13/dist/jquery-ean13.js"></script>
+    <script>
+         $(function(){
+                $("#kids").EAN13("9119909900231")
+         })
+    </script>
+</head>
+<body>
+    <figure>
+        <img src="./kids-fashion.jpg" width="200" height="300">
+        <figcaption>
+            <canvas width="200" height="50" id="kids">
+                Your browser doesn't support canvas.
+            </canvas>
+        </figcaption>
+    </figure>
+</body>
+</html>

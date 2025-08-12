@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../src/emi.js"></script>
+</head>
+<body class="container-fluid bg-secondary">
+    <div class="m-3 p-3 bg-light">
+        <h2 class="text-center">Personal Loan EMI Calculator</h2>
+        <div class="row my-4">
+            <div class="col">
+                Amount you need &#8377; <input type="text" id="txtAmount" size="16">
+            </div>
+            <div class="col">
+                for <input type="text" id="txtYears" size="4"> years
+            </div>
+            <div class="col">
+                interest rate <input type="text" size="4" id="txtRate"> %
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col">
+                <input type="range" id="rangeAmount" min="100000"  max="1000000" value="100000" class="form-range">
+                <span>&#8377; 1,00,000</span>
+                <span class="float-end">&#8377; 10,00,000</span>
+            </div>
+            <div class="col">
+                <input type="range" id="rangeYears" min="1"  max="5" value="1" class="form-range">
+                <span>1</span>
+                <span class="float-end">5</span>
+            </div>
+            <div class="col">
+                <input type="range" id="rangeRate" min="10.45"  max="18.45" value="10.45" step="0.01" class="form-range">
+                <span>10.45%</span>
+                <span class="float-end">18.45%</span>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col text-end">
+                <button class="btn btn-primary" id="btnCalculate">Calculate</button>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col">
+                <p id="msgEmi"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../jquery-ui/jquery-ui.js"></script>
+    <script>
+         $(function(){
+               $("#faqs").accordion();
+               $("#subscribe").dialog();
+               $("#dept").datepicker();
+         })
+    </script>
+ 
+</head>
+<body>
+    <div>
+        Departure : <input type="text" id="dept">
+    </div>
+    <div id="subscribe" title="jQuery UI">
+        <p>Welcome to jQuery UI</p>
+        <form>
+            <input type="email" placeholder="your email"> <button>Subscribe</button>
+        </form>
+    </div>
+   <h2 align="center">Frequently Asked Questions</h2>
+   <div id="faqs">
+         <h2>What is Netflix</h2>
+           <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia doloribus obcaecati velit voluptatum accusamus optio pariatur nisi similique nulla facilis ipsa eos sunt autem, neque dolorem officia labore ipsum quisquam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vitae eaque consequuntur nemo perferendis at numquam rerum, blanditiis porro repellat quod itaque consectetur reiciendis atque possimus dolorum suscipit culpa voluptas.</p>
+           </div>
+          <h2>How much does Netflix Cost?</h2>
+          <div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ab, voluptate quam accusantium eveniet commodi illo! Excepturi nulla ex nam eos consequuntur fugiat quae tempore odit, cumque saepe ipsum illum? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque incidunt numquam praesentium! Consectetur quidem eos dicta repellendus amet soluta sequi tempore cum et veniam. Natus esse voluptates ratione modi obcaecati!</p>
+          </div>
+   </div>
+</body>
+</html>
